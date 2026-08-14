@@ -25,7 +25,6 @@ botonSaludoUsuario.addEventListener("click",function(){
     // addEventListener input del usuario --> tipo click 
     console.log("El usuario presiona el boton mostrar saludo");
     mensajeSaludoUsuario.textContent = "Hola soy " + nombre + " y tengo " + edad;
-
 })
 
 
