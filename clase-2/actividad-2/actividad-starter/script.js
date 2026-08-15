@@ -53,7 +53,7 @@ const botonOcultar = document.querySelector("#boton-ocultar");
 // === compara de forma estricta el valor y el tipo de dato
 
 botonOcultar.addEventListener("click", function () {
-    if (descripcion.style.display == "none") { // se muestra 
+    if (descripcion.style.display === "none") { // se muestra 
         descripcion.style.display = "block";
         botonOcultar.textContent = "Ocultar descripción"
     }
@@ -72,4 +72,3 @@ const todosBotones = document.querySelectorAll("button");
 todosBotones.forEach(function (boton) {
     boton.style.backgroundColor = "#18005e";
 });
-
