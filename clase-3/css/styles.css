@@ -1,0 +1,8 @@
+body { background: #f3f4f8; }
+main { max-width: 700px; padding-top: 3rem; }
+.brand-logo { font-size: 1.5rem !important; }
+.card-panel { border-radius: 12px; padding: 2rem; }
+.resultado { margin-top: 1.5rem; padding: 1rem; border-left: 5px solid #3949ab; background: #e8eaf6; }
+.resultado.error { border-color: #e53935; background: #ffebee; color: #b71c1c; }
+.resultado.exito { border-color: #43a047; background: #e8f5e9; color: #1b5e20; }
+// agregar una clase que oculte el mensaje inicialmente
