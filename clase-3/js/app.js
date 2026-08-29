@@ -1,33 +1,39 @@
-// PASO 1: seleccionar el input de nombre, el input de edad,
-// el botón y el contenedor del resultado.
-
-const botonVerificar = document.querySelector("#verificar"); 
+const botonVerificar = document.querySelector("#verificar");
 const nombreInput = document.querySelector("#nombre");
 const edadInput = document.querySelector("#edad");
+const contenedorResultado = document.querySelector("#resultado");
 
-//    <input id="nombre" type="text">
-//        <input id="edad" type="number" min="1">
+// || or --> se debe cumplir una o la otra
+// & and --> se deben cumplir las dos
+// true && true ==> true 
+// true && false ==> false 
+// false && false ==> false 
 
+//function sumar(a,b --> los datos que recibe)
 
-botonVerificar.addEventListener("click", function(){
-  console.log("Boton Andando")
-  console.log (nombreInput.value.trim)
+function crearMensaje(nombre, edad) {
+  if (edad >= 18) {
+    return `Felicidades ${nombre}, podes entrar al evento`;
+  } else {
+    return `Lamentablemente ${nombre}, no podes ingresar`
+  }
+}
+
+botonVerificar.addEventListener("click", function () {
   //trim = corta los espacios vacios 
+  const nombreUsuario = nombreInput.value.trim();
+  const edadUsuario = Number(edadInput.value);
+
+  contenedorResultado.classList.remove("error", "exito");
+
+  // === igualdad 
+  if (nombreUsuario === "" || edadUsuario <= 0) {
+    contenedorResultado.textContent = "Datos invalidos";
+    contenedorResultado.classList.add("error");
+    return;
+  }
+
+  contenedorResultado.textContent = crearMensaje(nombreUsuario, edadUsuario);
+  contenedorResultado.classList.add("exito");
+
 });
-
-
-// PASO 2: crear la función crearMensaje(nombre, edad).
-// Debe devolver un mensaje diferente según la edad.
-
-
-// PASO 3: escuchar el evento click del botón.
-
-// PASO 4: obtener el nombre y convertir la edad a Number.
-
-
-// PASO 5: validar que el nombre no esté vacío y la edad sea mayor que cero.
-// Si hay un error, mostrar el mensaje y detener la función con return.
-
-
-// PASO 6: llamar a crearMensaje() y mostrar el resultado.
-
