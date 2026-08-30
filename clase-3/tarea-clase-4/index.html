@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de descuento</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <nav class="teal darken-2">
+    <div class="nav-wrapper container"><span class="brand-logo">Entradas</span></div>
+  </nav>
+  <main class="container">
+    <section class="card-panel z-depth-2">
+      <h1 class="flow-text">Calculadora de descuento</h1>
+      <p>Completá los datos para conocer el tipo de entrada.</p>
+      <div class="input-field"><i class="material-icons prefix">person</i><input id="nombre" type="text"><label
+          for="nombre">Nombre</label></div>
+      <div class="input-field"><i class="material-icons prefix">cake</i><input id="edad" type="number" min="1"><label
+          for="edad">Edad</label></div>
+
+      <!-- Switch -->
+      <div class="switch">
+          <i class="material-icons prefix">school</i>
+          <p>¿Eres estudiante?</p>
+        <label>
+          No
+          <input id ="estudiante" type="checkbox">
+          <span class="lever"></span>
+          Sí
+        </label>
+      </div>
+
+      <button id="calcular" class="btn waves-effect waves-light teal darken-2">Calcular descuento<i
+          class="material-icons right">confirmation_number</i></button>
+      <div id="resultado" class="resultado" aria-live="polite">El resultado aparecerá aquí.</div>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>
