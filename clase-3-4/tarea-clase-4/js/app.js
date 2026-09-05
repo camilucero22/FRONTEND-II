@@ -6,7 +6,7 @@
 
 function obtenerTipoEntrada(nombre, edad, estudiante) {
   if (edad < 18) {
-    return `Felicidades ${nombre}, tienes un descuento para menores`;
+    return `Felicidades ${nombre}, tienes un descuento para menores`; //backtick
   } else if (edad >= 65) {
     return `Felicidades ${nombre}, tienes un descuento para jubilados`;
   } else if (edad >= 18 && edad < 65 && estudiante === true) {
@@ -15,6 +15,8 @@ function obtenerTipoEntrada(nombre, edad, estudiante) {
     return `Felicidades ${nombre}, tienes una entrada general`;
   }
 }
+// < 18 
+// > 65 
 
 const calcularDescuento = document.querySelector("#calcular");
 const nombreInput = document.querySelector("#nombre");
