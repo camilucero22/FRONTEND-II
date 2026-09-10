@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cartelera de recomendaciones</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body class="grey lighten-4 grey-text text-darken-4">
+    <header class="teal lighten-2 grey-text text-darken-4">
+      <div class="container cabecera"><p class="etiqueta">Actividad · Clase 4</p><h1>Cartelera de recomendaciones</h1></div>
+    </header>
+    <main class="container seccion-principal">
+      <section class="card white">
+        <div class="card-content">
+          <span class="card-title">Nueva recomendación</span>
+          <form id="formulario-recomendacion" class="row" novalidate>
+            <div class="input-field col s12 m9"><input id="recomendacion" type="text"><label for="recomendacion">Película, serie, juego o experiencia</label></div>
+            <div class="col s12 m3"><button class="btn-large waves-effect waves-light teal darken-1 ancho-total" type="submit">Agregar</button></div>
+          </form>
+          <p id="mensaje" class="mensaje" aria-live="polite"></p>
+        </div>
+      </section>
+      <section>
+        <div class="titulo-cartelera"><h2>Recomendaciones</h2><div><span class="new badge teal" data-badge-caption="total"><span id="contador">0</span></span><button id="boton-eliminar" class="btn-flat red-text text-darken-2" type="button">Eliminar la última</button></div></div>
+        <div id="cartelera" class="row"></div>
+      </section>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

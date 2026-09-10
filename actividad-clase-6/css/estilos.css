@@ -1,0 +1,8 @@
+body { min-height: 100vh; }
+.cabecera { padding-block: 1.5rem; }
+.cabecera h1 { font-size: 2.2rem; margin: 0; }
+.etiqueta { margin: 0 0 0.35rem; text-transform: uppercase; }
+.seccion-principal { padding-block: 3rem; }
+.mensaje { min-height: 1.5rem; }
+.ancho-total { width: 100%; margin-top: 1rem; }
+.titulo-cartelera { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
