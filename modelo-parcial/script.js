@@ -13,7 +13,7 @@ const prefiereCortoUsuario = document.querySelector("#libroCorto");
 const botonRecomendacion = document.querySelector("#botonRecomendar"); 
 const mensajeResultado = document.querySelector ("#mensajeResultado"); 
 const bloqueResultado = document.querySelector ("#resultado"); 
-
+const tituloResultado = document.querySelector("#tituloResultado");
 
 // 2. Crear la función recomendarLibro
 // Debe recibir:
@@ -36,7 +36,7 @@ function recomendarLibro(genero, edad, prefiereCorto) {
       }
     } else { //mayor 
       if (prefiereCorto === true) {//mayor &  prefiere corto
-        libro = "Rubik"
+        libro = "Ubik"
       } else { //mayor & prefiere largo
         libro = "Dune"
       }
@@ -82,20 +82,27 @@ function recomendarLibro(genero, edad, prefiereCorto) {
   return libro;
 }
 
-botonRecomendacion.addEventListener("click", () => {
+botonRecomendacion.addEventListener("click", function (){
   const nombreIngresado = nombreUsario.value.trim();
   const edadIngresada = Number(edadUsario.value); 
   const generoIngresado = genero.value;
   const preferencia = prefiereCortoUsuario.checked;  
 
   bloqueResultado.classList.remove("oculto");
+  bloqueResultado.classList.remove("error"); 
 
   if (nombreIngresado === "" || edadIngresada <=0 || generoIngresado === "") {
-    mensajeResultado.textContent = "Datos invalidos"
-  } else{
-    mensajeResultado.textContent = `Hola ${nombreIngresado}, te recomiendo: ${recomendarLibro(generoIngresado, edadIngresada, preferencia)}`;
+    tituloResultado.textContent  = "Datos invalidos"
+    mensajeResultado.textContent = "Por favor revisa los datos"
+    bloqueResultado.classList.add("error"); 
+    return; // Como el bloque if termina con return, la función corta ahí si los datos son inválidos.
+
+  } else{ // puede ir dentro de el else o fuera de 
+    const recomendacion_final = recomendarLibro(generoIngresado, edadIngresada, preferencia)
+    tituloResultado.textContent  = "Recomendación"
+    mensajeResultado.textContent = `Hola ${nombreIngresado}, te recomiendo: ${recomendacion_final}`;
   }
-});
+})
 
 
 // 4. Escuchar el click del botón

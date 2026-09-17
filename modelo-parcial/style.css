@@ -13,3 +13,8 @@ h1 {
 .oculto {
   display: none;
 }
+
+.error {
+  background-color: darkred;
+  color: #f5f5f5;
+}
